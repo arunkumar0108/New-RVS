@@ -1,0 +1,22 @@
+
+
+<div class="login-container">
+  <div class="form-container">
+    <h3>{{ isRegisterMode ? 'Register' : 'Login' }}</h3>
+
+    <form [formGroup]="authForm" (ngSubmit)="onSubmit()">
+      <input type="email" placeholder="Email" formControlName="email">
+      <input type="password" placeholder="Password" formControlName="password">
+
+      <button type="submit">{{ isRegisterMode ? 'Register' : 'Login' }}</button>
+    </form>
+
+    <a (click)="switchMode()" class="login-register">Switch to {{ isRegisterMode ? 'Login' : 'Register' }}</a>
+    <app-loading *ngIf="isLoading"></app-loading>
+
+    <br /><br />
+    <!-- <button *ngIf="isLoggedIn" (click)="logout()">Logout</button> -->
+  </div>
+</div>
+
+
