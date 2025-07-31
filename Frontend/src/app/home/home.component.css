@@ -1,0 +1,39 @@
+h1{
+    text-align: center;
+    color: #207923ff;
+    font-size: 3.5em;
+    margin-top: 80px;
+}
+
+
+h1 {
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px var(--primary-color), 0 0 10px #69062aff, 0 0 20px #120353ff, 0 0 40px #077004ff, 0 0 80px #600333ff;
+    }
+    100% {
+        text-shadow: 0 0 10px #059ab8ff, 0 0 20px #06a4c3ff, 0 0 40px #042930ff, 0 0 80px #0f1212ff, 0 0 160px #02191dff;
+    }
+}
+
+.loading-title::after {
+  content: '';
+  animation: ellipsis 2s steps(4, end) infinite;
+  display: inline-block;
+  width: 1.4em; /* reserve space for up to 3 dots */
+  text-align: left;
+}
+
+@keyframes ellipsis {
+  0% { content: ''; }
+  25% { content: '.'; }
+  50% { content: '..'; }
+  75% { content: '...'; }
+  100% { content: ''; }
+}

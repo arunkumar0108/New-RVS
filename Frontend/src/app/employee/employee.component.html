@@ -1,0 +1,33 @@
+<header class="nav">
+  <!-- Left Part of Header -->
+  <div>
+    <h1 class="gradient-text">R <b>V</b> S</h1>
+  </div>
+
+ 
+
+  <!-- Navigation Links -->
+  <div class="list-nav">
+    <ul>
+      <li><span class="material-symbols-outlined">home</span><a routerLink="/">Home</a></li>
+      <li><span class="material-symbols-outlined">people</span><a routerLink="/emp-details">Employees Details</a></li>
+      <li><span class="material-symbols-outlined">handshake</span><a routerLink="/rvs-info">RVS Info</a></li>
+      <!-- <li><span class="material-symbols-outlined">corporate_fare</span><a href="#">Employee Attendance</a></li> -->
+    </ul>
+  </div>
+
+  <!-- Username Display -->
+  <!-- <div style="color: white; padding: 20px;">
+    {{ userName$ | async }}
+  </div> -->
+
+  <!-- Login/Logout Buttons -->
+ <div class="top-bar">
+    <div *ngIf="isLoggedIn && j" style="color: white;">
+    {{ j.email ? j.email.split('@')[0] : '' }}
+    </div>
+    <button *ngIf="!isLoggedIn" routerLink="/user-register">Login</button>
+    <button *ngIf="isLoggedIn" (click)="logout()">Logout</button>
+</div>
+
+</header>

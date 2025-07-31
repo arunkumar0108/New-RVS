@@ -1,0 +1,41 @@
+<!-- about.component.html -->
+<section class="hero">
+  <div class="back-color"></div>
+  <h1>R V S</h1>
+  <p class="tagline">Empowering with Technology · Training · Innovation</p>
+</section>
+
+<section class="technologies">
+  <h2>Our Technologies</h2>
+  <ul>
+    <li *ngFor="let tech of technologies">{{ tech }}</li>
+  </ul>
+</section>
+
+<section class="services">
+  
+  <div class="service">
+    <h2>What We Do</h2>
+    <div class="service-card" *ngFor="let svc of services">
+      <h3>{{ svc.title }}</h3>
+      <p>{{ svc.description }}</p>
+    </div>
+  </div>
+
+  <div class="service">
+    <h2>Training & Workshops</h2>
+    <div class="training-card" *ngFor="let t of trainings">
+      <h3>{{ t.title }}</h3>
+      <p>{{ t.outcome }}</p>
+    </div>
+  </div>
+
+</section>
+
+<section class="training">
+  
+</section>
+
+<section class="call-to-action">
+  <button (click)="contact()">Contact Us</button>
+</section>

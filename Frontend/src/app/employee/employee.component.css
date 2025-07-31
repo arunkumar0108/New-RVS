@@ -1,0 +1,83 @@
+.list-nav ul{
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+}
+.list-nav span{
+    font-weight: 400;
+    color: var(--primary-color);
+    position: relative;
+    right: 6px;
+    top: 5px;
+    bottom: 5px;
+    font-size: 24px;
+}
+.list-nav{
+    margin-left: 20%;
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--text-color);
+    color: white;
+}
+/* .nav h1{
+    color: var(--secondary-color);
+} */
+
+li:hover{
+    color: var(--secondary-color);
+    transition: 0.25s;
+}
+
+
+.list-nav li{
+     font-size: 15px;
+}
+
+.nav button{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.25s;
+    font-size: 15px;
+}
+.nav button:hover{
+    background-color: var(--secondary-color);
+    transition: 0.25s;
+}
+
+
+ 
+/* Logo Animation */
+
+.gradient-text {
+  font-size: 2.50rem;
+  font-weight: bold;
+  background: linear-gradient(
+    90deg,
+    #ff5f6d,
+    #ffc371,
+    #47d1ff,
+    #6e7bff,
+    #ff5f6d
+  );
+  background-size: 200% 200%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: gradient-shift 5s linear infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
