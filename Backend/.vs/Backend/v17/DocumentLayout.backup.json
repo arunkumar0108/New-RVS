@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\HP\\Documents\\Crud Employee\\Backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B1144FFE-F6F8-4F1A-A772-A9653330DD30}|CrudBackend\\CrudBackend.csproj|c:\\users\\hp\\documents\\crud employee\\backend\\crudbackend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B1144FFE-F6F8-4F1A-A772-A9653330DD30}|CrudBackend\\CrudBackend.csproj|solutionrelative:crudbackend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1144FFE-F6F8-4F1A-A772-A9653330DD30}|CrudBackend\\CrudBackend.csproj|c:\\users\\hp\\documents\\crud employee\\backend\\crudbackend\\controller\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1144FFE-F6F8-4F1A-A772-A9653330DD30}|CrudBackend\\CrudBackend.csproj|solutionrelative:crudbackend\\controller\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1144FFE-F6F8-4F1A-A772-A9653330DD30}|CrudBackend\\CrudBackend.csproj|c:\\users\\hp\\documents\\crud employee\\backend\\crudbackend\\controller\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1144FFE-F6F8-4F1A-A772-A9653330DD30}|CrudBackend\\CrudBackend.csproj|solutionrelative:crudbackend\\controller\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B1144FFE-F6F8-4F1A-A772-A9653330DD30}|CrudBackend\\CrudBackend.csproj|c:\\users\\hp\\documents\\crud employee\\backend\\crudbackend\\crudbackend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{B1144FFE-F6F8-4F1A-A772-A9653330DD30}|CrudBackend\\CrudBackend.csproj|solutionrelative:crudbackend\\crudbackend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -15,20 +27,12 @@
       "RelativeMoniker": "D:0:0:{B1144FFE-F6F8-4F1A-A772-A9653330DD30}|CrudBackend\\CrudBackend.csproj|solutionrelative:crudbackend\\dbcontxt\\employeedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B1144FFE-F6F8-4F1A-A772-A9653330DD30}|CrudBackend\\CrudBackend.csproj|c:\\users\\hp\\documents\\crud employee\\backend\\crudbackend\\controller\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B1144FFE-F6F8-4F1A-A772-A9653330DD30}|CrudBackend\\CrudBackend.csproj|solutionrelative:crudbackend\\controller\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B1144FFE-F6F8-4F1A-A772-A9653330DD30}|CrudBackend\\CrudBackend.csproj|c:\\users\\hp\\documents\\crud employee\\backend\\crudbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{B1144FFE-F6F8-4F1A-A772-A9653330DD30}|CrudBackend\\CrudBackend.csproj|solutionrelative:crudbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B1144FFE-F6F8-4F1A-A772-A9653330DD30}|CrudBackend\\CrudBackend.csproj|c:\\users\\hp\\documents\\crud employee\\backend\\crudbackend\\migrations\\20250730141953_data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B1144FFE-F6F8-4F1A-A772-A9653330DD30}|CrudBackend\\CrudBackend.csproj|solutionrelative:crudbackend\\migrations\\20250730141953_data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B1144FFE-F6F8-4F1A-A772-A9653330DD30}|CrudBackend\\CrudBackend.csproj|c:\\users\\hp\\documents\\crud employee\\backend\\crudbackend\\controller\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B1144FFE-F6F8-4F1A-A772-A9653330DD30}|CrudBackend\\CrudBackend.csproj|solutionrelative:crudbackend\\controller\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B1144FFE-F6F8-4F1A-A772-A9653330DD30}|CrudBackend\\CrudBackend.csproj|c:\\users\\hp\\documents\\crud employee\\backend\\crudbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,11 +50,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\HP\\Documents\\Crud Employee\\Backend\\CrudBackend\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "CrudBackend\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\HP\\Documents\\Crud Employee\\Backend\\CrudBackend\\Properties\\launchSettings.json",
+              "RelativeToolTip": "CrudBackend\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-31T06:26:57.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "20250730143925_Data.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Documents\\Crud Employee\\Backend\\CrudBackend\\Migrations\\EmployeeDb\\20250730143925_Data.cs",
               "RelativeDocumentMoniker": "CrudBackend\\Migrations\\EmployeeDb\\20250730143925_Data.cs",
@@ -62,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "EmployeeDbContext.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Documents\\Crud Employee\\Backend\\CrudBackend\\DbContxt\\EmployeeDbContext.cs",
               "RelativeDocumentMoniker": "CrudBackend\\DbContxt\\EmployeeDbContext.cs",
@@ -74,19 +95,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "EmployeeController.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Documents\\Crud Employee\\Backend\\CrudBackend\\Controller\\EmployeeController.cs",
               "RelativeDocumentMoniker": "CrudBackend\\Controller\\EmployeeController.cs",
               "ToolTip": "C:\\Users\\HP\\Documents\\Crud Employee\\Backend\\CrudBackend\\Controller\\EmployeeController.cs",
               "RelativeToolTip": "CrudBackend\\Controller\\EmployeeController.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAowFMAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAgwCcAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T14:26:45.364Z"
+              "WhenOpened": "2025-07-30T14:26:45.364Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\HP\\Documents\\Crud Employee\\Backend\\CrudBackend\\appsettings.json",
               "RelativeDocumentMoniker": "CrudBackend\\appsettings.json",
@@ -98,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "20250730141953_Data.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Documents\\Crud Employee\\Backend\\CrudBackend\\Migrations\\20250730141953_Data.cs",
               "RelativeDocumentMoniker": "CrudBackend\\Migrations\\20250730141953_Data.cs",
@@ -110,19 +132,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Documents\\Crud Employee\\Backend\\CrudBackend\\Controller\\UserController.cs",
               "RelativeDocumentMoniker": "CrudBackend\\Controller\\UserController.cs",
               "ToolTip": "C:\\Users\\HP\\Documents\\Crud Employee\\Backend\\CrudBackend\\Controller\\UserController.cs",
               "RelativeToolTip": "CrudBackend\\Controller\\UserController.cs",
-              "ViewState": "AgIAACEAAAAA+P/////3vzYAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAA//////8swDYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-30T14:02:52.279Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "CrudBackend.csproj",
               "DocumentMoniker": "C:\\Users\\HP\\Documents\\Crud Employee\\backend\\CrudBackend\\CrudBackend.csproj",
               "RelativeDocumentMoniker": "CrudBackend\\CrudBackend.csproj",
@@ -130,12 +152,11 @@
               "RelativeToolTip": "CrudBackend\\CrudBackend.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-07-30T14:00:29.45Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T14:00:29.45Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Documents\\Crud Employee\\Backend\\CrudBackend\\Program.cs",
               "RelativeDocumentMoniker": "CrudBackend\\Program.cs",
@@ -147,7 +168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "UserDbContext.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Documents\\Crud Employee\\Backend\\CrudBackend\\DbContxt\\UserDbContext.cs",
               "RelativeDocumentMoniker": "CrudBackend\\DbContxt\\UserDbContext.cs",
@@ -156,10 +177,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-30T13:55:26.526Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             }
           ]
         }

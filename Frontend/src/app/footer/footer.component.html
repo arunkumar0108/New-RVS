@@ -1,1 +1,24 @@
-<p>footer works!</p>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="contact-section">
+      <h5>Contact Us</h5>
+      <form (ngSubmit)="onSubmit()" #f="ngForm" novalidate>
+        <input type="text" [(ngModel)]="contact.name" name="name" placeholder="Your Name" required>
+        <input type="email" [(ngModel)]="contact.email" name="email" placeholder="Your Email" required>
+        <textarea [(ngModel)]="contact.message" name="message" placeholder="Message" rows="3" required></textarea>
+        <button type="submit" [disabled]="!f.form.valid">Send</button>
+      </form>
+    </div>
+    <div class="info-section">
+      <h5>RVS IT Consultancy</h5>
+      <!-- <p>We build robust Employee CRUD applications.</p> -->
+      <p>© {{ currentYear }} RVS IT Consultancy</p>
+      <div class="social-icons">
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+    </div>
+  </div>
+</footer>
