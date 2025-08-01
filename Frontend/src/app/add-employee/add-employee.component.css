@@ -68,6 +68,11 @@ button.btn:disabled {
   cursor: not-allowed;
 }
 
+
+.err-msg{
+  color: rgb(0, 255, 242);
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   section {

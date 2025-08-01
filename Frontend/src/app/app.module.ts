@@ -15,6 +15,7 @@ import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 import { AuthInterceptor } from './_intersecepter/auth.interceptor';
 import { LoadingComponent } from './loading/loading.component';
 import { InfoComponent } from './info/info.component';
+import { FooterComponent } from "./footer/footer.component";
 
 
 @NgModule({
@@ -35,8 +36,9 @@ import { InfoComponent } from './info/info.component';
     HttpClientModule,
     FormsModule,
     EmployeeRouterModule,
-    ReactiveFormsModule
-  ],
+    ReactiveFormsModule,
+    FooterComponent
+],
    providers: [
   {
     provide: HTTP_INTERCEPTORS,
