@@ -30,7 +30,7 @@ namespace New_Crud.Controllers
         {
             var existingUser = await _context.User.FirstOrDefaultAsync(u => u.Email == userDto.Email);
             if (existingUser != null)
-                return BadRequest(new { message = "User already exists" });
+                return BadRequest(new { message = "User already exists in Table..." });
 
             var hashedPassword = BCrypt.Net.BCrypt.HashPassword(userDto.Password);
             var user = new Users
