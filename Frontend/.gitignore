@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
 # Compiled output
@@ -49,27 +48,3 @@ Thumbs.db
 
 
 
-/.vscode
-/.vs
-/Backend/CrudBackend/obj/Release/net8.0
-/.gitignore
-/Backend/CrudBackend/obj/Debug/net8.0
-/.gitignore
-/.gitignore
-=======
-# Node modules
-**/node_modules
-
-# Environment variables
-**/.env
-
-# Logs
-**/logs
-*.log
-
-# OS
-.DS_Store
-Thumbs.db
-/Backend/.vs
-/.vs
->>>>>>> ee59e851ebe6f275254a1bbea48e1922fac69174
