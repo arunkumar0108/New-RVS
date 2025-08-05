@@ -1,0 +1,36 @@
+<section>
+    <h2>Add Employee</h2>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+        <label for="name">EmployeeID</label>
+        <input [(ngModel)]="employee.employeeId" name="employeeId" class="form-control" required>
+        </div>
+
+        <div *ngIf="errorMessage" class="err-msg">
+            {{ errorMessage }}
+        </div>
+    
+        <div class="form-group">
+        <label for="email">Name</label>
+        <input [(ngModel)]="employee.name" name="name" class="form-control" required>
+        </div>
+    
+        <div class="form-group">
+        <label for="position">Designation</label>
+        <input [(ngModel)]="employee.designation" name="designation" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+        <label for="position">Salary</label>
+        <input [(ngModel)]="employee.salary" name="salary" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+        <label for="position">Experience</label>
+        <input [(ngModel)]="employee.experience" name="experience" class="form-control" required>
+        </div>
+    
+        <button type="submit" class="btn btn-primary">Add Employee</button>
+    </form>
+</section>
+>>>>>>> 4691866 (Arun changes push)
