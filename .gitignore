@@ -50,3 +50,8 @@ Thumbs.db
 
 /.vscode
 /.vs
+/Backend/CrudBackend/obj/Release/net8.0
+/.gitignore
+/Backend/CrudBackend/obj/Debug/net8.0
+/.gitignore
+/.gitignore
