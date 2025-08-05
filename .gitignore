@@ -13,3 +13,5 @@
 Thumbs.db
 /Backend/.vs
 /.vs
+/Backend/CrudBackend/obj/Debug/net8.0
+/.gitignore
