@@ -134,6 +134,8 @@
 /* loading */
 .loading-animate{
     margin-left: 46%;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 .loading-animate p{
     position: relative;

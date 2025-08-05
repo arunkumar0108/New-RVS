@@ -16,10 +16,12 @@ import { AuthInterceptor } from './_intersecepter/auth.interceptor';
 import { LoadingComponent } from './loading/loading.component';
 import { InfoComponent } from './info/info.component';
 import { FooterComponent } from "./footer/footer.component";
+import { Footer1Component } from './footer1/footer1.component';
 
 
 @NgModule({
   declarations: [
+    FooterComponent,
     AppComponent,
     EmployeeListComponent,
     RegisterComponent,
@@ -29,7 +31,8 @@ import { FooterComponent } from "./footer/footer.component";
     InfoComponent,
     AddEmployeeComponent,
     EditEmployeeComponent,
-    LoadingComponent
+    LoadingComponent,
+    Footer1Component
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,6 @@ import { FooterComponent } from "./footer/footer.component";
     FormsModule,
     EmployeeRouterModule,
     ReactiveFormsModule,
-    FooterComponent
 ],
    providers: [
   {
@@ -46,6 +48,6 @@ import { FooterComponent } from "./footer/footer.component";
     multi: true
   }
 ],
-  bootstrap: [AppComponent]
+  bootstrap: []
 })
 export class AppModule { }

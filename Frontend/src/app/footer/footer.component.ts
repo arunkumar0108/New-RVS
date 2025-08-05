@@ -4,9 +4,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  imports: [FormsModule],
-  standalone: true,
-  styleUrls: ['./footer.component.css']
+  styleUrl: './footer.component.css'
 })
 export class FooterComponent {
   currentYear: number = new Date().getFullYear();
