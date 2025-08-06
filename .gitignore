@@ -1,3 +1,62 @@
+<<<<<<< HEAD
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+Backend.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# System files
+.DS_Store
+Thumbs.db
+
+
+
+/.vscode
+/.vs
+/Backend/CrudBackend/obj/Release/net8.0
+/.gitignore
+/Backend/CrudBackend/obj/Debug/net8.0
+/.gitignore
+/.gitignore
+=======
 # Node modules
 **/node_modules
 
@@ -12,6 +71,11 @@
 .DS_Store
 Thumbs.db
 /Backend/.vs
+<<<<<<< HEAD
 /.vs
 /Backend/CrudBackend/obj/Debug/net8.0
 /.gitignore
+=======
+/.vs
+>>>>>>> ee59e851ebe6f275254a1bbea48e1922fac69174
+>>>>>>> 63d78a97f8d3f83ccb712aea7c2801525614288c
