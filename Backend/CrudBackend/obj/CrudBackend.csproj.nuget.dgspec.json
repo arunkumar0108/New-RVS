@@ -11,7 +11,7 @@
         "projectName": "CrudBackend",
         "projectPath": "C:\\Users\\HP\\Documents\\Crud Employee\\Backend\\CrudBackend\\CrudBackend.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Documents\\Crud Employee\\backend\\CrudBackend\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Documents\\Crud Employee\\Backend\\CrudBackend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
