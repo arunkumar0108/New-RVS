@@ -81,3 +81,6 @@ Thumbs.db
 >>>>>>> 63d78a97f8d3f83ccb712aea7c2801525614288c
 /Backend/CrudBackend/obj/project.nuget.cache
 /.gitignore
+/Backend/CrudBackend/bin/Debug/net8.0/CrudBackend.exe
+/Backend/CrudBackend/bin/Debug/net8.0/CrudBackend.pdb
+/Backend/CrudBackend/bin/Debug/net8.0/CrudBackend.dll
