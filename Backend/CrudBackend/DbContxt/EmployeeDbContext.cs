@@ -13,7 +13,5 @@ namespace New_Crud.DbContxt
 
         public DbSet<Employee> RVSWorkers { get; set; }
 
-        public DbSet<Users> Users { get; set; }
-
     }
 }

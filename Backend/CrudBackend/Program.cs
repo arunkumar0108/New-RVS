@@ -7,6 +7,13 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+    });
+});
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
@@ -23,14 +30,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAll", policy =>
-    {
-        policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
-    });
-});
-
 // DB Context
 // DB Contexts
 builder.Services.AddDbContext<UserDbContext>(options =>
@@ -46,7 +45,7 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Your API", Version = "v1" });
 
-    // 🔐 Add JWT Authentication to Swagger
+    // Add JWT Authentication to Swagger
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Name = "Authorization",
@@ -73,21 +72,28 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
+// 3. Authorization
+builder.Services.AddAuthorization();
 
 var app = builder.Build();
-app.UseSwagger();
-app.UseSwaggerUI();
 
+// 4. Middleware Pipeline
+
+// Global Exception Handling
+app.UseExceptionHandler("/error");
+
+// Swagger only in dev
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+// HTTPS redirect
 app.UseHttpsRedirection();
+
 app.UseCors("AllowAll");
-
-
-app.UseAuthentication();
-app.UseCors(policy => policy
-    .AllowAnyOrigin()
-    .AllowAnyMethod()
-    .AllowAnyHeader());
-
+ 
 app.UseAuthorization();
 
 app.MapControllers();

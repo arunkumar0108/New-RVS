@@ -7,7 +7,7 @@ namespace New_Crud.DbContxt
     {
         public UserDbContext(DbContextOptions<UserDbContext> options): base(options) { }
 
-        public DbSet<Users> User { get; set; }
+        public DbSet<Users> Users { get; set; }
         
     }
 }

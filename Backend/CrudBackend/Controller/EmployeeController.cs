@@ -13,15 +13,10 @@ namespace New_Crud.Controllers
     public class EmployeeController : ControllerBase
     {
         private readonly  EmployeeDbContext _employee;
-          
-
-
         public EmployeeController(EmployeeDbContext employee)
         {
             _employee = employee;
         }
-
-
 
         //[Authorize]
         [HttpGet]
@@ -56,29 +51,51 @@ namespace New_Crud.Controllers
             _employee.RVSWorkers.Add(employee);
             await _employee.SaveChangesAsync();
 
+            //return CreatedAtRoute("GetEmployee", new { id = employee.Id }, employee);
             return Ok(employee);
         }
-
-
 
         [HttpPut("{id:int}")]
         public IActionResult Update(int id, [FromBody]Employee employee)
         {
             var excist = _employee.RVSWorkers.FirstOrDefault(e => e.Id == id);
-            if(excist == null)
-            return NotFound();
 
+            if (excist == null)
+            {
+                return NotFound();
+            }
             excist.EmployeeId = employee.EmployeeId;
             excist.Name = employee.Name;
             excist.Salary = employee.Salary;
             excist.Designation = employee.Designation;
             excist.Experience = employee.Experience;
             
-            //_employee.RVSWorkers.Update(employee);
             _employee.SaveChanges();
             return Ok(excist);
         }
-        [HttpGet("{id:int}")]
+
+        //[HttpGet("employees/{name:alpha}")]
+        //public IActionResult GetByName(string name)
+        //{
+        //    var emp = _employee.RVSWorkers.FirstOrDefault(e => e.Name == name);
+        //    return emp == null ? NotFound() : Ok(emp);
+        //}
+
+        //[HttpGet("employees/{id:int}/{status?}")]
+        //public IActionResult GetEmployee(int id, string? status)
+        //{
+        //    var emp = _employee.RVSWorkers.FirstOrDefault(e => e.Id == id);
+
+        //    if (emp == null)
+        //        return NotFound();
+
+        //    if (status != null && emp.Status != status)
+        //        return NotFound();
+
+        //    return Ok(emp);
+        //}
+
+        [HttpGet("{id:int}", Name = "GetEmployee")]
         public IActionResult GetById(int id)
         {
             var emp = _employee.RVSWorkers.FirstOrDefault(e => e.Id == id);
@@ -86,12 +103,11 @@ namespace New_Crud.Controllers
             {
                 return NotFound();
             }
+            //return CreatedAtRoute("GetEmployee", new { id = emp.Id }, emp);
             return Ok(emp);
         }
 
-        [HttpDelete("{id}")]
-
-        
+        [HttpDelete("{id}")]        
         public IActionResult DeleteEmployee(int id)
         {
             var employee = _employee.RVSWorkers.Find(id);

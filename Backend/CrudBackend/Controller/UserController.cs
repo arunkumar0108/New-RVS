@@ -28,40 +28,54 @@ namespace New_Crud.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register(Users userDto)
         {
-            var existingUser = await _context.User.FirstOrDefaultAsync(u => u.Email == userDto.Email);
-            if (existingUser != null)
-                return BadRequest(new { message = "User already exists in Table..." });
-
-            var hashedPassword = BCrypt.Net.BCrypt.HashPassword(userDto.Password);
-            var user = new Users
+            try
             {
-                Email = userDto.Email,
-                Password = hashedPassword
-            };
+                var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == userDto.Email);
+                if (existingUser != null)
+                    return BadRequest(new { message = "User already exists in Table..." });
 
-            _context.User.Add(user);
-            await _context.SaveChangesAsync();
+                var hashedPassword = BCrypt.Net.BCrypt.HashPassword(userDto.Password);
+                var user = new Users
+                {
+                    Email = userDto.Email,
+                    Password = hashedPassword
+                };
 
-            return Ok(new { message = "Registration successful" });
+                _context.Users.Add(user);
+                await _context.SaveChangesAsync();
+
+                return Ok(new { message = "Registration successful" });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "An error occurred while processing your request.");
+            }
         }
 
         [HttpPost("login")]
         public IActionResult Login([FromBody] Users loginUser)
         {
-            if (string.IsNullOrEmpty(loginUser.Email) || string.IsNullOrEmpty(loginUser.Password))
-                return BadRequest("Invalid credentials");
+            try
+            {
+                if (string.IsNullOrEmpty(loginUser.Email) || string.IsNullOrEmpty(loginUser.Password))
+                    return BadRequest("Invalid credentials");
 
-            // 1. Check DB for correct email & password
-            var user = _context.User.FirstOrDefault(u => u.Email == loginUser.Email);
+                // 1. Check DB for correct email & password
+                var user = _context.Users.FirstOrDefault(u => u.Email == loginUser.Email);
 
-            if (user == null || !BCrypt.Net.BCrypt.Verify(loginUser.Password, user.Password))
-                return Unauthorized("Wrong email or password");
+                if (user == null || !BCrypt.Net.BCrypt.Verify(loginUser.Password, user.Password))
+                    return Unauthorized("Wrong email or password");
 
-            // 2. If found → Generate token
-            var token = GenerateJwtToken(user);
+                // 2. If found → Generate token
+                var token = GenerateJwtToken(user);
 
-            // 3. Return token to frontend
-            return Ok(new { token });
+                // 3. Return token to frontend
+                return Ok(new { token });
+            }
+            catch(Exception ex)
+            {
+                return StatusCode(500, "An error occurred while processing your request.");
+            }
         }
 
         private string GenerateJwtToken(Users user)
