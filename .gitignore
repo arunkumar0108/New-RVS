@@ -84,3 +84,5 @@ Thumbs.db
 /Backend/CrudBackend/bin/Debug/net8.0/CrudBackend.exe
 /Backend/CrudBackend/bin/Debug/net8.0/CrudBackend.pdb
 /Backend/CrudBackend/bin/Debug/net8.0/CrudBackend.dll
+/Backend/CrudBackend/obj/CrudBackend.csproj.nuget.dgspec.json
+/Backend/CrudBackend/obj/project.assets.json

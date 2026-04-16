@@ -20,41 +20,69 @@ namespace New_Crud.Controllers
             _logger = logger;
         }
 
-        //[Authorize]
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            return Ok(await _employee.RVSWorkers.ToListAsync());
-        }
+            _logger.LogInformation("GetAll Employees API called");
 
-        //[HttpGet("{id}")]
-        //public async Task<IActionResult> GetById(int id)
-        //{
-        //    var emp = await _employee.RVSWorkers.FindAsync(id);
-        //    return emp == null ? NotFound() : Ok(emp);
-        //}
+            try
+            {
+                var employees = await _employee.RVSWorkers.ToListAsync();
+
+                if (employees == null || employees.Count == 0)
+                {
+                    _logger.LogWarning("No employees found in database");
+                    return NotFound("No employees found");
+                }
+
+                _logger.LogInformation("Fetched {Count} employees successfully", employees.Count);
+
+                return Ok(employees);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while fetching employees");
+                return StatusCode(500, "Internal server error");
+            }
+        }
 
         [HttpPost]
         public async Task<ActionResult<Employee>> AddEmployee([FromBody] Employee employee)
         {
-            if (employee == null)
-                return BadRequest("Employee data is required.");
+            _logger.LogInformation("AddEmployee API called");
 
-            // 1. Check if EmployeeId already exists in the database
+            if (employee == null)
+            {
+                _logger.LogWarning("AddEmployee failed: Employee object is null");
+                return BadRequest("Employee data is required.");
+            }
+
+            _logger.LogInformation("Incoming Employee Data: {@employee}", employee);
+
+            // Check if EmployeeId already exists
             var exists = await _employee.RVSWorkers
                 .AnyAsync(e => e.EmployeeId == employee.EmployeeId);
 
             if (exists)
             {
+                _logger.LogWarning("AddEmployee failed: EmployeeId {EmployeeId} already exists", employee.EmployeeId);
                 return BadRequest("An Employee with that EmployeeId already exists.");
             }
 
-            // 2. Add the new employee
-            _employee.RVSWorkers.Add(employee);
-            await _employee.SaveChangesAsync();
+            try
+            {
+                _employee.RVSWorkers.Add(employee);
+                await _employee.SaveChangesAsync();
 
-            return CreatedAtRoute("GetEmployee", new { id = employee.Id }, employee);
-            //return Ok(employee);
+                _logger.LogInformation("Employee created successfully with Id {Id}", employee.Id);
+
+                return CreatedAtRoute("GetEmployee", new { id = employee.Id }, employee);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while adding employee with EmployeeId {EmployeeId}", employee.EmployeeId);
+                return StatusCode(500, "Internal server error");
+            }
         }
 
         [HttpPut("{id:int}")]
