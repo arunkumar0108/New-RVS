@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using New_Crud.DbContxt;
 using New_Crud.Models;
@@ -72,7 +71,7 @@ namespace New_Crud.Controllers
                 // 3. Return token to frontend
                 return Ok(new { token });
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return StatusCode(500, "An error occurred while processing your request.");
             }
@@ -99,11 +98,5 @@ namespace New_Crud.Controllers
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
-
-
-
-
-
-
     }
 }

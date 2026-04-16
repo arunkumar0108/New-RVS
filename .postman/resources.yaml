@@ -1,0 +1,7 @@
+# Use this workspace to collaborate
+workspace:
+  id: 570e02c1-64bf-46bd-85ad-42c5ce224666
+
+localResources:
+  specs:
+    - ..\Backend\CrudBackend\obj\Debug\net8.0\EndpointInfo\CrudBackend.json

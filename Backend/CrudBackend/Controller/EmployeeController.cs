@@ -12,10 +12,12 @@ namespace New_Crud.Controllers
     [Route("api/[controller]")]
     public class EmployeeController : ControllerBase
     {
-        private readonly  EmployeeDbContext _employee;
-        public EmployeeController(EmployeeDbContext employee)
+        private readonly EmployeeDbContext _employee;
+        private readonly ILogger<EmployeeController> _logger;
+        public EmployeeController(EmployeeDbContext employee, ILogger<EmployeeController> logger)
         {
             _employee = employee;
+            _logger = logger;
         }
 
         //[Authorize]
@@ -51,8 +53,8 @@ namespace New_Crud.Controllers
             _employee.RVSWorkers.Add(employee);
             await _employee.SaveChangesAsync();
 
-            //return CreatedAtRoute("GetEmployee", new { id = employee.Id }, employee);
-            return Ok(employee);
+            return CreatedAtRoute("GetEmployee", new { id = employee.Id }, employee);
+            //return Ok(employee);
         }
 
         [HttpPut("{id:int}")]
@@ -121,7 +123,5 @@ namespace New_Crud.Controllers
 
             return NoContent();
         }
-
-
     }
 }
