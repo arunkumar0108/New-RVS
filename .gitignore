@@ -79,3 +79,5 @@ Thumbs.db
 /.vs
 >>>>>>> ee59e851ebe6f275254a1bbea48e1922fac69174
 >>>>>>> 63d78a97f8d3f83ccb712aea7c2801525614288c
+/Backend/CrudBackend/obj/project.nuget.cache
+/.gitignore
